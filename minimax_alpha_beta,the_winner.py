@@ -1,13 +1,15 @@
 def The_winner(board):
-    sum_computer=0
-    sum_player=0
-    if game_ended(board):
-        sum_player=sum_player+board[6]
-        sum_computer=sum_computer+board[13]
+  sum_computer=0
+  sum_player=0
+  if game_ended(board):
+        for i in range(0,7):
+             sum_player=sum_player+board[i]
+        for i in range(7,14):     
+              sum_computer=sum_computer+board[i]
         
-    if sum_player>sum_computer:
+  if sum_player>sum_computer:
         return "the winner is player with number of stones = " + str(sum_player)
-    else :
+  else :
         return "the winner is computer with number of stones = " + str(sum_computer)
     
     
