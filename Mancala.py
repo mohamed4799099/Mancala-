@@ -380,6 +380,7 @@ if __name__ == "__main__":
                 
         print("the Game is end and : ",The_winner(board))
         print(board)
+        dummy=int(input())
         
        
 
