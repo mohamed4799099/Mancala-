@@ -13,9 +13,10 @@ if __name__ == "__main__":
     
     if(mode==0):
         while(True):
-            if game_ended(board):
-                break
+          
             if(turn==0):
+                if game_ended(board):
+                   break
                 while(True):
                     print("The Turn of AI")
                     t,the_bestmove =  minimax_alpha_beta(board,depth,-1000000,1000000,True) ######## dh kda hydek a7san le3ba t5le l ai yeksb
@@ -44,9 +45,12 @@ if __name__ == "__main__":
                     
                     
             else:
+                 if game_ended(board):
+                    break
                  while (True):
                     if game_ended(board):
-                         break
+                       break
+                   
                     print(board) 
                     print("play") 
                     inputt_from_player= int(input())
@@ -78,9 +82,11 @@ if __name__ == "__main__":
         print(board)
     else:
         while(True):
-            if game_ended(board):
-                break
+        
+           
             if(turn==0):
+                if game_ended(board):
+                   break
                 while(True):
                     print("The Turn of AI")
                     t,the_bestmove =  minimax_alpha_beta_without_stealing(board,depth,-1000000,1000000,True) ######## dh kda hydek a7san le3ba t5le l ai yeksb
@@ -109,9 +115,10 @@ if __name__ == "__main__":
                     
                     
             else:
-                 while (True):
-                    if game_ended(board):
+                 if game_ended(board):
                          break
+                 while (True):
+                   
                     print(board) 
                     print("play") 
                     inputt_from_player= int(input())
@@ -141,3 +148,5 @@ if __name__ == "__main__":
                 
         print("the Game is end and : ",The_winner(board))
         print(board)
+        dummy=int(input())
+        
