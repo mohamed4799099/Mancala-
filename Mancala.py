@@ -26,7 +26,7 @@ def next_move_without_stealing(inputt,board):
             temp_stones=temp_stones-1
             
         if inputt==13: ########### y3ni lw l last step kant f l mancala bt3to lazm y5od turn kman
-            flag=True 
+            flag=True  
             
        
     
